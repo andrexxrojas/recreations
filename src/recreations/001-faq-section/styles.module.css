@@ -1,0 +1,91 @@
+.wrapper {
+    padding: 0.3rem;
+    background-color: #a8ff43;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #F2F0EC;
+    border-top: 1px solid #0A0A0A;
+}
+
+.item:last-child {
+    border-bottom: 1px solid #0A0A0A;
+}
+
+.header {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 0.2rem;
+    padding-block: 0.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.number,
+.title {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 5.5rem;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    transition: rotate 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 300ms ease;
+}
+
+.contentInner {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+}
+
+.open .content {
+    grid-template-rows: 1fr;
+}
+
+.open .header {
+    background-color: #C0FE77;
+    border-bottom: 1px solid #0A0A0A;
+}
+
+.open .icon {
+    transform: rotate(45deg);
+}
+
+.contentText {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    text-indent: 11ch;
+    text-align: justify;
+    padding-inline: 0.5rem;
+    padding-block: 1em;
+}
+
+@media (hover:hover) {
+    .header:hover {
+        background-color: #C0FE77;
+    }
+}
